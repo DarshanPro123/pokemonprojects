@@ -1,0 +1,123 @@
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: orange;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+.container-home {
+    width: 100%;
+    height: 100vh;
+    border: var(--boorder);
+    margin-top: 70px;
+    background-color: rgb(29, 29, 29);
+    background-image: url("/src/assets/home.png");
+    background-size: contain;
+    position: relative;
+}
+
+.overlap-dark {
+    filter: blur(100px);
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(15, 14, 14, 0.7);
+}
+
+.container-home .content_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: auto;
+    padding: 0 20px;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.content_box span {
+    color: rgb(253, 189, 111);
+}
+
+.content_box h2 {
+    width: 100%;
+    border-right: 0.14em solid rgba(255, 162, 0, 0.95);
+    /* margin: 0 10%; */
+    animation: typing infinite 3.5s steps(40, end), blink-caret 0.85s step-end infinite;
+    font-size: 5rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    /* Set to auto initially */
+}
+
+.content_box button {
+    border: none;
+    background-color: rgba(255, 162, 0, 0.95);
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: 160px;
+    margin-top: 30px;
+}
+
+.content_box button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.content_box button a:hover {
+
+    color: rgb(0, 0, 0);
+}
+
+
+@media (max-width:824px) {
+    .container-home {
+        background-image: none;
+    }
+
+
+    .container-home .content_box {
+        width: 100%;
+    }
+
+    .content_box h2 {
+        font-size: 2.6rem;
+        color: aliceblue;
+    }
+
+    .content_box button {
+        font-size: 1.3rem;
+        margin-top: 30px;
+        width: 50%;
+    }
+
+    .dashbord {
+        margin-top: 60vh;
+    }
+}
