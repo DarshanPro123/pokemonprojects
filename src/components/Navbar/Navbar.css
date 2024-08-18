@@ -61,10 +61,6 @@
     border-bottom: 1px solid white;
 }
 
-
-
-
-
 .toggle button {
     border: none;
     background-color: transparent;
@@ -86,11 +82,15 @@
 } */
 @media (max-width: 824px) {
     .nav-links {
-        width: 0;
-        height: 0;
+        width: 0%;
+        height: 0%;
+        z-index: 0;
+        overflow: hidden;
         transition: all 0.5s linear;
         position: relative;
     }
+
+
 
     .nav-links.open {
         display: flex;
