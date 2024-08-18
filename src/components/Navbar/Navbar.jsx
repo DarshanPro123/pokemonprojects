@@ -39,7 +39,7 @@ const Navbar = () => {
           </button>
           <ul className={isNavOpen ? "nav-links open" : "nav-links"}>
             {/* close button  */}
-            {isNavOpen ? <button onClick={toggleNav}>X</button> : ""}
+            {isNavOpen ? <button onClick={toggleNav}>&#x2715;</button> : ""}
             <li>
               <NavLink
                 activeClassname="active"
