@@ -34,7 +34,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <button onClick={toggleNav}>
+          <button className="btn1" onClick={toggleNav}>
             <IoReorderThreeOutline />
           </button>
           <ul className={isNavOpen ? "nav-links open" : "nav-links"}>
